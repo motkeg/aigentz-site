@@ -1,0 +1,89 @@
+<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Purple gradient for the logo -->
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#a78bfa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6b46c1;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Animation for the neural network lines -->
+    <style>
+      .network-line {
+        stroke-dasharray: 20;
+        animation: dash 3s linear infinite;
+      }
+      
+      .node-pulse {
+        animation: pulse 2s ease-in-out infinite alternate;
+      }
+      
+      @keyframes dash {
+        to {
+          stroke-dashoffset: -20;
+        }
+      }
+      
+      @keyframes pulse {
+        from {
+          opacity: 0.5;
+          transform: scale(1);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1.1);
+        }
+      }
+      
+      .logo-text {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+        fill: url(#purpleGradient);
+      }
+      
+      .tagline {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+        fill: #a78bfa;
+        opacity: 0.8;
+      }
+    </style>
+  </defs>
+  
+  <!-- Background circle for the icon -->
+  <circle cx="25" cy="40" r="20" fill="#000000" stroke="url(#purpleGradient)" stroke-width="2"/>
+  
+  <!-- Neural network nodes -->
+  <circle cx="20" cy="35" r="2" fill="#8b5cf6" class="node-pulse"/>
+  <circle cx="30" cy="35" r="2" fill="#a78bfa" class="node-pulse"/>
+  <circle cx="25" cy="45" r="2" fill="#6b46c1" class="node-pulse"/>
+  <circle cx="15" cy="45" r="1.5" fill="#8b5cf6" class="node-pulse"/>
+  <circle cx="35" cy="45" r="1.5" fill="#a78bfa" class="node-pulse"/>
+  
+  <!-- Neural network connections -->
+  <line x1="20" y1="35" x2="30" y2="35" stroke="#8b5cf6" stroke-width="1" class="network-line"/>
+  <line x1="20" y1="35" x2="25" y2="45" stroke="#a78bfa" stroke-width="1" class="network-line"/>
+  <line x1="30" y1="35" x2="25" y2="45" stroke="#6b46c1" stroke-width="1" class="network-line"/>
+  <line x1="15" y1="45" x2="25" y2="45" stroke="#8b5cf6" stroke-width="1" class="network-line"/>
+  <line x1="25" y1="45" x2="35" y2="45" stroke="#a78bfa" stroke-width="1" class="network-line"/>
+  
+  <!-- Central AI symbol -->
+  <path d="M 22 40 L 25 37 L 28 40 L 25 43 Z" fill="url(#purpleGradient)" filter="url(#glow)"/>
+  
+  <!-- Company name -->
+  <text x="60" y="35" class="logo-text">AIGentz</text>
+  
+  <!-- Tagline -->
+  <text x="60" y="50" class="tagline">AGENTIC AI SOLUTIONS</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple favicon optimized for small sizes -->
+  <rect width="16" height="16" rx="8" fill="#000000"/>
+  <circle cx="8" cy="8" r="7" fill="none" stroke="#8b5cf6" stroke-width="1"/>
+  
+  <!-- Simplified neural nodes -->
+  <circle cx="6" cy="6" r="1" fill="#8b5cf6"/>
+  <circle cx="10" cy="6" r="1" fill="#a78bfa"/>
+  <circle cx="8" cy="10" r="1" fill="#6b46c1"/>
+  
+  <!-- Center AI dot -->
+  <circle cx="8" cy="8" r="0.5" fill="#a78bfa"/>
+  
+  <!-- Connecting lines -->
+  <line x1="6" y1="6" x2="10" y2="6" stroke="#8b5cf6" stroke-width="0.5" opacity="0.6"/>
+  <line x1="6" y1="6" x2="8" y2="10" stroke="#a78bfa" stroke-width="0.5" opacity="0.6"/>
+  <line x1="10" y1="6" x2="8" y2="10" stroke="#6b46c1" stroke-width="0.5" opacity="0.6"/>
+</svg>
